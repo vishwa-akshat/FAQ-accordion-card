@@ -37,10 +37,13 @@ h1{
     top:35%;
     left: -10%;
 }
-.women-online{ 
+.women-online-desktop{ 
     position: relative;
     top:10%;
     left: -21%;   
+}
+.women-online-mobile{ 
+    display: none;   
 }
 .right-container{
     padding-left: 2.5rem;
@@ -96,4 +99,73 @@ h1{
 }
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 376px){
+    body{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 2.5rem;
+        margin:20px 0 50px;
+        text-align: center;
+    }
+    .container{
+        width: 85%;
+        height: 70%;
+        display: flex;
+        top:55%;
+        flex-direction: column;
+    }
+    .left-container{
+        width: 100%;
+        height: 20%;
+        background: url("./images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        overflow: hidden;
+    }
+    .box{
+        display: none;
+    }
+    .women-online-desktop{ 
+        display: none;     
+    }
+    .women-online-mobile{ 
+        display: block;
+        position: absolute;
+        top:-20%; 
+        left: 4%;
+    }
+    .right-container{
+        width: 100%;
+        height: 80%;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    .accordion{
+        margin-top: -20px;
+        width: 93%;
+        padding-left: 17px;
+    }
+    .accordion-item-header{
+        padding: 1rem 0 0.4rem;
+    }
+    .accordion-item-header::after{
+        right: 0.2rem;
+    }
+    .accordion-item-body{
+        color:hsla(240, 6%, 50%,0.7);
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+    .accordion-item-header.active::after{
+        bottom: 0.6rem;
+    }
+    .attribution {
+        left: 7%;
+        font-size: 11px;
+        text-align: center; 
+        color: white;
+    }
 }
